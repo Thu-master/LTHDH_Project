@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MLFQ Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Multilevel Feedback Queue (MLFQ) Simulator</h1>
+    
+    <div class="input-section">
+      <input type="text" id="processName" placeholder="Tên tiến trình (P1, P2...)">
+      <input type="number" id="arrivalTime" placeholder="Thời gian đến" min="0">
+      <input type="number" id="burstTime" placeholder="Burst Time" min="1">
+      <button onclick="addProcess()">Thêm tiến trình</button>
+    </div>
+
+    <div class="queue-visuals">
+      <div class="queue" id="queue0"><h3>Queue 0 (Time Quantum: 4)</h3></div>
+      <div class="queue" id="queue1"><h3>Queue 1 (Time Quantum: 8)</h3></div>
+      <div class="queue" id="queue2"><h3>Queue 2 (FCFS)</h3></div>
+    </div>
+
+    <div class="controls">
+      <button onclick="startSimulation()">Bắt đầu mô phỏng</button>
+    </div>
+
+    <div class="log" id="log"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
