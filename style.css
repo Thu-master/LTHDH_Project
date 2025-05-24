@@ -1,78 +1,60 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 20px;
-}
-
-.container {
-  max-width: 1000px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-h1 {
-  text-align: center;
-  color: #333;
-}
-
-.input-section {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.input-section input {
-  padding: 5px;
-  width: 140px;
-}
-
-.input-section button {
-  padding: 5px 10px;
-}
-
-.queue-visuals {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.queue {
-  border: 2px solid #444;
-  padding: 10px;
-  border-radius: 6px;
-  min-height: 60px;
-  background-color: #eef;
-}
-
-.queue h3 {
-  margin: 0 0 10px 0;
-}
-
-.process {
-  display: inline-block;
-  padding: 5px 10px;
-  background-color: #4CAF50;
+html, body {
+  height: auto;
+  overflow-y: auto;
+  background-color: black;
   color: white;
-  margin: 0 5px;
-  border-radius: 4px;
-}
-
-.controls {
-  text-align: center;
-  margin-top: 20px;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 .log {
-  margin-top: 30px;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
-  font-family: monospace;
-  max-height: 300px;
-  overflow-y: auto;
-  background-color: #f9f9f9;
+  max-height: none;
+  overflow-y: visible;
+}
+
+.button {
+  background-color: transparent;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.button ul {
+  list-style-type: none;
+  margin: 0;
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+}
+
+.button li a{
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 16px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+.button li a:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border: 2px solid #444;
+  background-color: #000;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
 }

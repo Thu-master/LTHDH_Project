@@ -4,34 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MLFQ Simulator</title>
-  <!-- Kết nối CSSCSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <!-- Nội dung giao diện -->
-    <h1>Multilevel Feedback Queue (MLFQ) Simulator</h1>
-    
-    <div class="input-section">
-      <input type="text" id="processName" placeholder="Tên tiến trình (P1, P2...)">
-      <input type="number" id="arrivalTime" placeholder="Thời gian đến" min="0">
-      <input type="number" id="burstTime" placeholder="Burst Time" min="1">
-      <button onclick="addProcess()">Thêm tiến trình</button>
-    </div>
+  <nav class="button">
+    <ul>
+      <li><a href="#about">Giới thiệu</a></li>
+      <li><a href="#algorithms">Thuật toán</a></li>
+      <li><a href="#simulator">Mô phỏng</a></li>
+      <li><a href="#tutorial">Hướng dẫn</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+    </ul>
+  </nav>
 
-    <div class="queue-visuals">
-      <div class="queue" id="queue0"><h3>Queue 0 (Time Quantum: 4)</h3></div>
-      <div class="queue" id="queue1"><h3>Queue 1 (Time Quantum: 8)</h3></div>
-      <div class="queue" id="queue2"><h3>Queue 2 (FCFS)</h3></div>
-    </div>
+  <section id="about"><h2>Giới thiệu</h2></section>
+  <section id="algorithms"><h2>Thuật toán</h2></section>
+  <section id="simulator"><h2>Mô phỏng</h2></section>
+  <section id="tutorial"><h2>Hướng dẫn</h2></section>
+  <section id="contact"><h2>Liên hệ</h2></section>
 
-    <div class="controls">
-      <button onclick="startSimulation()">Bắt đầu mô phỏng</button>
-    </div>
-
-    <div class="log" id="log"></div>
-  </div>
-    <!-- Kết nối JS -->
   <script src="script.js"></script>
 </body>
 </html>
