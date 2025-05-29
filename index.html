@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MLFQ Simulator</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>MLFQ Landing Page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="button">
+  <!-- Navigation -->
+  <nav class="navbar">
     <ul>
-      <li><a href="#about">Giới thiệu</a></li>
-      <li><a href="#algorithms">Thuật toán</a></li>
-      <li><a href="#simulator">Mô phỏng</a></li>
-      <li><a href="#tutorial">Hướng dẫn</a></li>
-      <li><a href="#contact">Liên hệ</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#algorithm">Algorithm</a></li>
+      <li><a href="simulator.html">Simulator</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#tutorial">Tutorial</a></li>
     </ul>
   </nav>
 
-  <section id="about"><h2>Giới thiệu</h2></section>
-  <section id="algorithms"><h2>Thuật toán</h2></section>
-  <section id="simulator"><h2>Mô phỏng</h2></section>
-  <section id="tutorial"><h2>Hướng dẫn</h2></section>
-  <section id="contact"><h2>Đội ngũ phát triển</h2></section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to MLFQ Simulator</h1>
+    <p>Experience the Multilevel Feedback Queue algorithm in action.</p>
+    <a href="simulator.html">
+      <button>Start Simulator</button>
+    </a>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>This project simulates the MLFQ scheduling algorithm used in modern OS schedulers.</p>
+  </section>
+
+  <!-- Algorithm -->
+  <section id="algorithm">
+    <h2>Algorithm</h2>
+    <p>MLFQ dynamically changes process priority based on CPU usage. Multiple queues allow fair scheduling.</p>
+  </section>
+
+  <!-- Tutorial -->
+  <section id="tutorial">
+    <h2>Tutorial</h2>
+    <p>Go to the Simulator page and input your processes to visualize MLFQ in action.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Developed by students of the Operating Systems course.</p>
+  </section>
 </body>
 </html>

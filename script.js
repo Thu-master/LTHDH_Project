@@ -28,11 +28,9 @@ function startSimulation() {
   const completed = [];
   time = 0;
 
-  // Clone processes để tránh thay đổi danh sách gốc
   let procList = JSON.parse(JSON.stringify(processes));
 
   const interval = setInterval(() => {
-    // Đưa tiến trình đến đúng queue nếu đến đúng thời điểm
     procList.forEach(p => {
       if (p.arrivalTime === time) {
         queues[0].push(p);
@@ -41,7 +39,6 @@ function startSimulation() {
       }
     });
 
-    // Xử lý tiến trình trong hàng đợi ưu tiên cao nhất có tiến trình
     for (let q = 0; q < queues.length; q++) {
       if (queues[q].length > 0) {
         let current = queues[q].shift();
@@ -71,12 +68,11 @@ function startSimulation() {
             clearInterval(interval);
           }
 
-        }, 500); // Giả lập delay khi chạy tiến trình
+        }, 500);
         return;
       }
     }
 
-    // Không có tiến trình nào trong queue
     time++;
   }, 600);
 }
@@ -87,7 +83,7 @@ function updateQueues(queues) {
     queueDiv.innerHTML = `<h3>Queue ${i} (${i === 0 ? "TQ:4" : i === 1 ? "TQ:8" : "FCFS"})</h3>`;
     queues[i].forEach(p => {
       const el = document.createElement("span");
-      el.className = "process";
+      el.className = "process";s
       el.innerText = p.name;
       queueDiv.appendChild(el);
     });
@@ -99,3 +95,17 @@ function log(text) {
   logDiv.innerHTML += text + "<br>";
   logDiv.scrollTop = logDiv.scrollHeight;
 }
+
+// Khi nhấn nút "Start Simulator" thì hiện phần mô phỏng
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("simulatorBtn");
+  const simulatorSection = document.getElementById("simulator");
+
+  if (btn && simulatorSection) {
+    btn.addEventListener("click", function () {
+      simulatorSection.classList.remove("hidden");
+      simulatorSection.scrollIntoView({ behavior: "smooth" });
+    });
+  }
+});
+

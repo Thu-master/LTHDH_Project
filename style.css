@@ -1,60 +1,177 @@
-html, body {
-  height: auto;
-  overflow-y: auto;
-  background-color: black;
-  color: white;
+/* style.css */
+
+/* Reset & Base */
+body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #2d2d64, #0b506f);
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  padding: 12px 30px;
+  font-size: 1em;
+  background-color: #00d2ff;
+  border: none;
+  border-radius: 25px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero button:hover {
+  background-color: #00b7e6;
+}
+
+/* Sections */
+section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.input-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  padding: 10px;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
+}
+
+.input-section button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.queue-visuals {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.queue {
+  border: 2px solid #fff;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #1e1e3f;
+}
+
+.queue h3 {
+  margin-top: 0;
+}
+
+.process {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #ff6f61;
+  color: white;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+.controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  background-color: #ffa500;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .log {
-  max-height: none;
-  overflow-y: visible;
-}
-
-.button {
-  background-color: transparent;
-  width: 100%;
-  margin-top: 60px;
-}
-
-.button ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 120px;
-}
-
-.button li a{
-  background-color: transparent;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  padding: 16px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  display: inline-block;
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 25px;
-  transition: background-color 0.3s, transform 0.2s, color 0.3s;
-}
-
-.button li a:hover {
-  background-color: white;
-  color: black;
-  transform: scale(1.1);
-}
-
-
-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  border: 2px solid #444;
-  background-color: #000;
-  color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-}
+  margin-top: 20px;
+  background: #00000088;
+  padding: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-family: monospace;
+  border-radius: 5px;
+  border: 1px solid #888;
+} 

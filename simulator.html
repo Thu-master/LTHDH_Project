@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MLFQ Simulator</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <section id="simulator">
+    <h2>MLFQ Simulator</h2>
+
+    <div class="input-section">
+      <input type="text" id="processName" placeholder="Process Name (e.g. P1)">
+      <input type="number" id="arrivalTime" placeholder="Arrival Time" min="0">
+      <input type="number" id="burstTime" placeholder="Burst Time" min="1">
+      <button onclick="addProcess()">Add Process</button>
+    </div>
+
+    <div class="queue-visuals">
+      <div class="queue" id="queue0"><h3>Queue 0 (Time Quantum: 4)</h3></div>
+      <div class="queue" id="queue1"><h3>Queue 1 (Time Quantum: 8)</h3></div>
+      <div class="queue" id="queue2"><h3>Queue 2 (FCFS)</h3></div>
+    </div>
+
+    <div class="controls">
+      <button onclick="startSimulation()">Start Simulation</button>
+    </div>
+
+    <div class="log" id="log"></div>
+  </section>
+</body>
+</html>
