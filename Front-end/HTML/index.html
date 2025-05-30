@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>MLFQ Landing Page</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
+  
+<!--
+<video autoplay muted loop id="bg-video">
+  <source src="../../Background/Test (1).mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+-->
+
   <!-- Navigation -->
   <nav class="navbar">
     <ul>
@@ -33,7 +41,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Welcome to MLFQ Simulator</h1>
+    <h1 class="typewriter" id="welcome-text"></h1>
     <p>Experience the Multilevel Feedback Queue algorithm in action.</p>
     <a href="simulator.html">
       <button>Start Simulator</button>
@@ -63,5 +71,21 @@
     <h2>Contact</h2>
     <p>Developed by students of the Operating Systems course.</p>
   </section>
+<!-- Run word -->
+<script>
+  const text = "Welcome to MLFQ Simulator";
+  const target = document.getElementById("welcome-text");
+  let index = 0;
+
+  function type() {
+    if (index < text.length) {
+      target.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(type, 75); // tốc độ gõ từng ký tự
+    }
+  }
+
+  window.onload = type;
+</script>
 </body>
 </html>
