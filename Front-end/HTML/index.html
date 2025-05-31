@@ -7,37 +7,34 @@
 </head>
 <body>
   
-<!--
 <video autoplay muted loop id="bg-video">
-  <source src="../../Background/Test (1).mp4" type="video/mp4">
+  <source src="../../Background/vdo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
--->
 
   <!-- Navigation -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about">About</a></li>
+ <nav class="navbar">
+  <ul>
+    <li><a href="#about">About</a></li>
     <li class="dropdown">
       <a href="#">Algorithm ▾</a>
-      <ul class="dropdown-content">
-        <li><strong>Disk Scheduling</strong></li>
-        <li><a href="fcfs.html">• FCFS</a></li>
-        <li><a href="sstf.html">• SSTF</a></li>
-        <li><a href="scan.html">• SCAN</a></li>
-        <li><a href="cscan.html">• C-SCAN</a></li>
-        <li><strong>Paging</strong></li>
-        <li><a href="fifo.html">• FIFO</a></li>
-        <li><a href="lru.html">• LRU</a></li>
-        <li><a href="optimal.html">• Optimal</a></li>
-      </ul>
-    </li>
-
-      <li><a href="simulator.html">Simulator</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#tutorial">Tutorial</a></li>
+    <ul class="dropdown-content">
+      <li class="column">
+        <p class="column-title">Disk Scheduling</p>
+        <a href="fcfs.html">• FCFS</a>
+        <a href="sstf.html">• SSTF</a>
+        <a href="scan.html">• SCAN</a>
+        <a href="cscan.html">• C-SCAN</a>
+      </li>
+      <li class="column">
+        <p class="column-title">Paging</p>
+        <a href="fifo.html">• FIFO</a>
+        <a href="lru.html">• LRU</a>
+        <a href="optimal.html">• Optimal</a>
+      </li>
     </ul>
   </nav>
+
 
   <!-- Hero Section -->
   <section class="hero">
@@ -81,7 +78,7 @@
     if (index < text.length) {
       target.innerHTML += text.charAt(index);
       index++;
-      setTimeout(type, 75); // tốc độ gõ từng ký tự
+      setTimeout(type, 100); // tốc độ gõ từng ký tự
     }
   }
 

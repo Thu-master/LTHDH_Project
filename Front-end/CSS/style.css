@@ -3,7 +3,8 @@ body, html {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #2d2d64, #0b506f);
+  /*background: linear-gradient(to right, #2d2d64, #0b506f);*/
+  background: #000;
   color: #fff;
   scroll-behavior: smooth;
 }
@@ -48,6 +49,8 @@ body, html {
 
 /* Hero Section */
 .hero {
+  position: relative;
+  z-index: 2;
   height: 100vh;
   background: url('https://www.transparenttextures.com/patterns/stardust.png');
   display: flex;
@@ -57,6 +60,7 @@ body, html {
   text-align: center;
   padding: 20px;
 }
+
 
 .hero h1 {
   font-size: 3em;
@@ -180,34 +184,28 @@ h2 {
 
 .dropdown-content {
   position: absolute;
-  top: calc(100% + 12px); /* tạo khoảng cách với nút "Algorithm" */
-  left: 0;
-  min-width: 180px; /* scale backgroud */
-  max-width: 220px;
-  /*background: rgba(0, 0, 0, 0.45);
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 24px;
+  background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);*/
-  background: transparent !important;
   border-radius: 12px;
-  /*box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);*/
-  box-shadow: none !important;
-  padding: 0;
-  display: block;
-  flex-direction: column;
-  gap: 28px !important;
+  padding: 20px 24px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translateY(8px);
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-  z-index: 1001;
+  z-index: 999;
 }
+
 
 .dropdown:hover .dropdown-content {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateY(0);
+  transform: translate(-50%, 0);
 }
 
 .dropdown-content li {
@@ -238,7 +236,8 @@ h2 {
   font-size: 0.9em;
   text-decoration: none;
   transition: all 0.25s ease;
-  margin: 2px 24px;
+  margin: 2px 6px;
+  min-width: 160px;
 }
 
 .dropdown-content li a:hover {
@@ -246,6 +245,58 @@ h2 {
   transform: scale(1.03);
   border-color: #ffffffaa;
 }
+
+.dropdown-content .column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.dropdown-content .column strong {
+  color: #00c8ff;
+  font-size: 0.85em;
+  margin-bottom: 5px;
+}
+
+.dropdown-content .column a {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: 1.5px solid #ffffff55;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  min-width: 130px;
+  text-align: center;
+}
+
+.dropdown-content .column a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.03);
+  border-color: #ffffffaa;
+}
+
+.dropdown-spacer {
+  flex-grow: 1;
+  visibility: hidden;
+  height: 100%;
+  padding: 6px 12px;
+  min-width: 130px;
+  border-radius: 20px;
+}
+
+.column-title {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #00c8ff;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 
 /* Chạy chữ */
 .typewriter {
@@ -267,13 +318,13 @@ h2 {
 
 /* Video */
 #bg-video {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: 1;
   opacity: 0.85; /* điều chỉnh độ trong mờ */
   pointer-events: none; /* để người dùng không click trúng video */
 }
