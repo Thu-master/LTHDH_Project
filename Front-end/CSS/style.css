@@ -7,7 +7,7 @@ body, html {
   background: #000;
   color: #fff;
   scroll-behavior: smooth;
-  height: 100%;
+  height: 100%; /* Chỉnh độ dài cả web */
 }
 
 .hidden {
@@ -29,7 +29,7 @@ body, html {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 80px; /* Khoảng cách giữa 2 item navigation */
   margin: 0;
   padding: 0;
 }
@@ -41,6 +41,10 @@ body, html {
   border: 2px solid #fff;
   border-radius: 20px;
   transition: all 0.3s ease;
+}
+
+.navbar ul li a i {     /* Icon trong menu navigation */
+  margin-right: 8px;
 }
 
 .navbar ul li a:hover {
@@ -60,6 +64,14 @@ body, html {
   text-align: center;
   padding: 20px;
 }
+
+/*button i {    /* Icon trong nút bấm - Hero Section 
+  margin: 0 6px;
+}
+
+button i:first-child { margin-right: 6px; } chỉnh từng button riêng nếu cần sau này
+button i:last-child { margin-left: 6px; }
+*/
 
 .hero h1 {
   font-size: 3em;
@@ -185,8 +197,8 @@ h2 {
 
 .dropdown-content {
   position: absolute;
-  top: calc(100% + 12px);
-  left: 50%; /* 50% để căn giữa */
+  top: calc(100% + 12px);           /* tạo khoảng cách với nút "Algorithm" */
+  left: 50%;                        /* 50% để căn giữa */
   transform: translateX(-50%); /*translateX(40px);*/
   display: flex;
   gap: 24px;
@@ -221,7 +233,7 @@ h2 {
   font-weight: bold;
   padding-left: 10px;
   text-transform: uppercase;
-  margin: 6px 0 2px; 
+  margin: 6px 0 2px; /* cách xa trên & sát mục dưới */
 }
 
 .dropdown-content li:first-child strong {
@@ -347,4 +359,79 @@ h2 {
   z-index: 2;
   opacity: 0.6;
   pointer-events: none;
+}
+
+/* Footer About-US */
+footer {
+  background-color: #111;
+  color: #ccc;
+  background: transparent !important;
+  box-shadow: none !important
+  padding: 60px 20px;
+  font-size: 14px;
+  z-index: 2;
+  border-top: 1px solid #444;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-left, .footer-right, .footer-social, .footer-links {
+  flex: 1 1 250px;
+  margin: 20px;
+}
+
+.footer-left h3 {
+  color: #00d2ff;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.footer-right p,
+.footer-left p {
+  margin: 6px 0;
+}
+
+.footer-social a {
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: #ccc;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  color: #00d2ff;
+}
+
+.footer-links a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 6px 0;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00d2ff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85em;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  color: #666;
+}
+
+/* Cập nhật liên kết đến footer */
+.navbar ul li a[href="#about"] {
+  scroll-margin-top: 100px; /* đảm bảo không bị che bởi navbar fixed */
 }
