@@ -331,7 +331,7 @@ h2 {
 
 /* Video */
 #bg-video {
-  position: fixed;
+  position: absolute; /*để fix video bao phủ cả web */
   top: 0;
   left: 0;
   width: 100%;
@@ -345,9 +345,16 @@ h2 {
   transform: translateZ(0);     /* thay CPU */
 }
 
+.main-bg {
+  position: relative; 
+  overflow: hidden;
+  z-index: 1;
+  min-height: 100vh; /* thêm chiều cao tối thiểu để chứa nội dung */
+}
+
 /* Global background container */
 #bg-stars {
-  position: fixed;
+  position: absolute;  /*để fix video bao phủ cả web */
   top: 0;
   left: 0;
   width: 100vw;
@@ -363,10 +370,10 @@ h2 {
 
 /* Footer About-US */
 footer {
-  background-color: #111;
+  background: linear-gradient(to bottom, #0b0b0b, #000); /* Nền tách biệt */
   color: #ccc;
-  background: transparent !important;
-  box-shadow: none !important
+  /*background: transparent !important;
+  box-shadow: none !important*/
   padding: 60px 20px;
   font-size: 14px;
   z-index: 2;

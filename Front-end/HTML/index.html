@@ -7,69 +7,71 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- Video Background -->
-  <video autoplay muted loop id="bg-video">
-    <source src="../../Background/vdo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <div class="main-bg">
+    <!-- Video Background -->
+    <video autoplay muted loop id="bg-video">
+      <source src="../../Background/vdo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
-  <!-- Image Background -->
-  <div id="bg-stars"></div>
+    <!-- Image Background -->
+    <div id="bg-stars"></div>
 
-  <!-- Navigation -->
- <nav class="navbar">
-  <ul>
-    <li><a href="#about"><i class="fas fa-info-circle"></i>About</a></li>
-    <li class="dropdown">
-      <a href="#"><i class="fas fa-cogs"></i>Algorithm ▾</a>
-    <ul class="dropdown-content">
-      <li class="column">
-        <p class="column-title">Disk Scheduling</p>
-        <a href="fcfs.html">• FCFS</a>
-        <a href="sstf.html">• SSTF</a>
-        <a href="scan.html">• SCAN</a>
-        <a href="cscan.html">• C-SCAN</a>
-      </li>
-      <li class="column">
-        <p class="column-title">Paging</p>
-        <a href="fifo.html">• FIFO</a>
-        <a href="lru.html">• LRU</a>
-        <a href="optimal.html">• Optimal</a>
-      </li>
-    </ul>
-    <li><a href="Tutorial.html"><i class="fas fa-book-open"></i>Tutorial</a></li>
-  </nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#about"><i class="fas fa-info-circle"></i>About</a></li>
+        <li class="dropdown">
+          <a href="#"><i class="fas fa-cogs"></i>Algorithm ▾</a>
+        <ul class="dropdown-content">
+          <li class="column">
+            <p class="column-title">Disk Scheduling</p>
+            <a href="fcfs.html">• FCFS</a>
+            <a href="sstf.html">• SSTF</a>
+            <a href="scan.html">• SCAN</a>
+            <a href="cscan.html">• C-SCAN</a>
+          </li>
+          <li class="column">
+            <p class="column-title">Paging</p>
+            <a href="fifo.html">• FIFO</a>
+            <a href="lru.html">• LRU</a>
+            <a href="optimal.html">• Optimal</a>
+          </li>
+        </ul>
+        <li><a href="Tutorial.html"><i class="fas fa-book-open"></i>Tutorial</a></li>
+      </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 class="typewriter" id="welcome-text"></h1>
+      <p>Experience the Multilevel Feedback Queue algorithm in action.</p>
+      <a href="simulator.html">
+        <button>
+          <i class="fa-solid fa-hand-point-right"></i> 
+          <i class="fas fa-play-circle"></i>
+            Start Simulator 
+          <i class="fa-solid fa-hand-point-left"></i>
+        </button>
+      </a>
+    </section>
+  </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1 class="typewriter" id="welcome-text"></h1>
-    <p>Experience the Multilevel Feedback Queue algorithm in action.</p>
-    <a href="simulator.html">
-      <button>
-        <i class="fa-solid fa-hand-point-right"></i> 
-        <i class="fas fa-play-circle"></i>
-          Start Simulator 
-        <i class="fa-solid fa-hand-point-left"></i>
-      </button>
-    </a>
-  </section>
+    <!-- Welcome Text -->
+    <script>
+      const text = "Welcome to MLFQ Simulator";
+      const target = document.getElementById("welcome-text");
+      let index = 0;
 
-  <!-- Welcome Text -->
-  <script>
-    const text = "Welcome to MLFQ Simulator";
-    const target = document.getElementById("welcome-text");
-    let index = 0;
-
-    function type() {
-      if (index < text.length) {
-        target.innerHTML += text.charAt(index);
-        index++;
-        setTimeout(type, 100); // tốc độ gõ từng ký tự
+      function type() {
+        if (index < text.length) {
+          target.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(type, 100); // tốc độ gõ từng ký tự
+        }
       }
-    }
-    window.onload = type;
-  </script>
-
+      window.onload = type;
+    </script>
+  
   <!-- Footer -->
   <footer id="about">
     <div class="footer-container">
