@@ -8,6 +8,10 @@ body, html {
   color: #fff;
   scroll-behavior: smooth;
   height: 100%; /* Chỉnh độ dài cả web */
+  overflow-y: auto;
+}
+body.no-scroll {
+  overflow-y: hidden;
 }
 
 .hidden {
@@ -23,6 +27,7 @@ body, html {
   /*backdrop-filter: blur(5px);*/
   padding: 10px 0;
   z-index: 1000;
+  height: 64px;
 }
 
 .navbar ul {
@@ -63,6 +68,7 @@ body, html {
   justify-content: center;
   text-align: center;
   padding: 20px;
+  height: calc(100vh - 64px);
 }
 
 /*button i {    /* Icon trong nút bấm - Hero Section 
