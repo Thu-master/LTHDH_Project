@@ -58,22 +58,52 @@ This project was developed by a collaborative team without strict role assignmen
 2. Mở file index.html bằng trình duyệt (Chrome/Edge/Firefox...)
 
 📚 **Nội dung thư mục | Folder Structure**
-'''
-LTHDH_Project/
+```
+Project-LTHDH/
 │
-├── index.html             # Landing page chính
-├── about.html             # Trang "About Us"
-├── tutorial.html          # Trang hướng dẫn
-├── simulator.html         # Trình mô phỏng thuật toán MLFQ
+├── Back-end/
+│ └── (Hiện tại chưa có nội dung cụ thể)
 │
-├── css/
-│   └── style.css          # CSS tổng thể
+├── Background/
+│ ├── 12686138_3840_2160.jpg # Hình nền
+│ └── vdo.mp4 # Video nền trang landing
 │
-├── js/
-│   ├── scroll.js          # Hiệu ứng scroll
-│   ├── simulator.js       # Logic mô phỏng MLFQ
-│   └── navigation.js      # Chuyển trang
+├── Front-end/
 │
-└── assets/
-    └── video/             # Nền video landing page
-'''
+│ ├── CSS/
+│ │ ├── loginStyle.css # Giao diện form đăng nhập
+│ │ ├── simulatorStyle.css # Giao diện trình mô phỏng
+│ │ ├── style.css # Giao diện tổng thể
+│ │ └── tutorialStyle.css # Giao diện trang hướng dẫn
+│
+│ ├── HTML/
+│ │ ├── C-SCAN.html # Mô phỏng thuật toán C-SCAN
+│ │ ├── FCFS.html # Mô phỏng thuật toán FCFS
+│ │ ├── FIFO.html # Mô phỏng thuật toán FIFO (paging)
+│ │ ├── index.html # Trang landing chính
+│ │ ├── login.html # Trang đăng nhập
+│ │ ├── LRU.html # Mô phỏng thuật toán LRU (paging)
+│ │ ├── OPTIMAL.html # Mô phỏng thuật toán OPTIMAL (paging)
+│ │ ├── SCAN.html # Mô phỏng thuật toán SCAN
+│ │ ├── SRTF.html # Mô phỏng thuật toán SRTF
+│ │ ├── simulator.html # Giao diện mô phỏng MLFQ
+│ │ └── Tutorial.html # Trang hướng dẫn sử dụng
+│
+│ └── JS/
+│ ├── C-SCAN.js # Logic mô phỏng C-SCAN
+│ ├── FCFS.js # Logic mô phỏng FCFS
+│ ├── FIFO.js # Logic mô phỏng FIFO
+│ ├── login.js # Xử lý đăng nhập
+│ ├── LRU.js # Logic mô phỏng LRU
+│ ├── OPTIMAL.js # Logic mô phỏng OPTIMAL
+│ ├── SCAN.js # Logic mô phỏng SCAN
+│ ├── script.js # Script tổng hợp (nếu có)
+│ ├── SRTF.js # Logic mô phỏng SRTF
+│ └── tutorial.js # Script hướng dẫn
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+└── temp.txt # Ghi chú tạm
+
+```
