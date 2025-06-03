@@ -1,77 +1,123 @@
-# 🌐 Mô phỏng thuật toán MLFQ – Multilevel Feedback Queue CPU Scheduling
+# 🧠 Mô Phỏng Thuật Toán Lập Lịch CPU – MLFQ
 
-**Website mô phỏng trực quan thuật toán điều độ CPU: MLFQ (Multilevel Feedback Queue) được xây dựng bằng HTML, CSS và JavaScript.**
+![HTML](https://img.shields.io/badge/Tech-HTML%2FCSS%2FJS-yellow)
+![Version](https://img.shields.io/badge/Version-1.0-blue)
+![Status](https://img.shields.io/badge/Status-Đồ_án_cuối_kỳ-success)
 
-![Project Banner](#) <!-- Chèn hình ảnh demo tại đây -->
+---
 
-## 🎯 Giới thiệu | Introduction
+## 📝 Giới Thiệu
 
-Đây là đồ án cuối kỳ môn **Lập trình Hệ điều hành**, với mục tiêu xây dựng một trang web mô phỏng trực quan hoạt động của thuật toán lập lịch CPU nổi tiếng – **Multilevel Feedback Queue (MLFQ)**.
+**MLFQ Web Simulator** là một website được phát triển nhằm mục đích **mô phỏng trực quan thuật toán lập lịch CPU Multilevel Feedback Queue (MLFQ)**.  
+Đây là đồ án cuối kỳ môn **Lập Trình Hệ Điều Hành**, giúp sinh viên:
 
-Trang web giúp người học, đặc biệt là sinh viên ngành CNTT, hiểu rõ hơn về cách thuật toán MLFQ xử lý các tiến trình qua từng cấp độ hàng đợi ưu tiên, thời lượng CPU, và các bước điều phối.
+- Hiểu sâu hơn về cách hoạt động của thuật toán MLFQ.
+- Trực tiếp quan sát quy trình xử lý tiến trình qua các hàng đợi ưu tiên.
+- Rèn luyện tư duy thuật toán thông qua tương tác trực quan trên giao diện web hiện đại.
 
-This is a final course project for *Operating System Programming*. It provides an interactive simulation of the **Multilevel Feedback Queue (MLFQ)** CPU scheduling algorithm using modern web technologies.
+---
 
-## 🛠️ Công nghệ sử dụng | Technologies
+## 🎯 Tính Năng Chính
 
-- HTML5
-- CSS3 (kèm hiệu ứng transition, animation)
-- JavaScript (DOM, mô phỏng hàng đợi)
-- (Future upgrade: Java backend, modern JS frameworks...)
+1. **Giao Diện Landing Page Chuyên Nghiệp**  
+   - Thiết kế hiện đại, hiệu ứng cuộn mượt, nền video sống động.
+   - Navigation bar tích hợp icon, dễ sử dụng.
 
-## 🚀 Tính năng nổi bật | Key Features
+2. **Mô Phỏng Tương Tác Thuật Toán MLFQ**  
+   - Nhập tiến trình, thời gian burst, thời điểm đến.
+   - Hiển thị trực quan thứ tự xử lý và thời gian từng tiến trình.
 
-✨ **Giao diện hiện đại**:  
-- Landing page cuốn hút với video nền, hiệu ứng cuộn mượt.  
-- Navbar có icon, responsive design.
+3. **Chuyển Trang, Tutorial và About Us**  
+   - Chuyển trang không giật lag, trải nghiệm liền mạch.
+   - Trang hướng dẫn sử dụng kèm lý thuyết giải thích rõ ràng.
+   - Giới thiệu nhóm phát triển và mục tiêu dự án.
 
-🧠 **Mô phỏng trực quan**:  
-- Giao diện mô phỏng tương tác, cho phép người dùng nhập tiến trình.  
-- Hiển thị từng bước hoạt động của thuật toán MLFQ.  
-- Hỗ trợ thay đổi thông số và tự động tính toán.
+4. **Thiết Kế Responsive, Hoạt Động Hoàn Toàn Trên Client**  
+   - Không cần backend hay cài đặt phức tạp.
+   - Phù hợp cho cả máy tính và thiết bị di động.
 
-📘 **Trang hướng dẫn (Tutorial)**:  
-- Giải thích lý thuyết MLFQ và cách sử dụng trình mô phỏng.
+---
 
-👥 **About Us**:  
-- Thông tin nhóm phát triển.
+## ⚙️ Cài Đặt và Sử Dụng
 
-🌐 **Chuyển trang mượt mà**  
-- Sử dụng `window.location` kết hợp hiệu ứng điều hướng.
+### 1. Yêu Cầu Hệ Thống
 
-🖼️ **Demo & Hình ảnh**:
-- [**Video demo**](#) <!-- Chèn link video demo -->
-- [**Hình ảnh giao diện**](#) <!-- Chèn hình ảnh mô phỏng -->
+- Trình duyệt hiện đại: Chrome, Edge, Firefox...
+- Kết nối internet (để hiển thị video nền nếu dùng link online)
 
-## 🧑‍💻 Nhóm thực hiện | Project Team
+### 2. Cài Đặt
 
-Dự án được thực hiện theo nhóm với phương pháp phát triển linh hoạt, các thành viên cùng đóng góp vào tất cả các phần mà không chia nhiệm vụ cụ thể.
+```bash
+git clone https://github.com/Thu-master/LTHDH_Project.git
+cd LTHDH_Project
+Sau đó mở file index.html bằng trình duyệt bất kỳ.
 
-This project was developed by a collaborative team without strict role assignment – each member contributed to various parts of the system.
+3. Hướng Dẫn Sử Dụng
+Truy cập trang landing → click “Simulator” để vào trình mô phỏng.
 
-## 📦 Cách chạy dự án | How to Run
+Nhập các thông số tiến trình cần mô phỏng.
 
-1. Clone repo về máy:
-   ```bash
-   git clone https://github.com/Thu-master/LTHDH_Project.git
+Quan sát quá trình xử lý theo thuật toán MLFQ.
 
-2. Mở file index.html bằng trình duyệt (Chrome/Edge/Firefox...)
-
-📚 **Nội dung thư mục | Folder Structure**
+🗂️ Cấu Trúc Thư Mục
+bash
+Sao chép
+Chỉnh sửa
 LTHDH_Project/
 │
-├── index.html             # Landing page chính
-├── about.html             # Trang "About Us"
-├── tutorial.html          # Trang hướng dẫn
-├── simulator.html         # Trình mô phỏng thuật toán MLFQ
+├── index.html             # Trang landing page
+├── tutorial.html          # Trang hướng dẫn sử dụng
+├── about.html             # Trang giới thiệu nhóm
+├── simulator.html         # Trang mô phỏng MLFQ
 │
 ├── css/
-│   └── style.css          # CSS tổng thể
+│   └── style.css          # Giao diện và hiệu ứng
 │
 ├── js/
-│   ├── scroll.js          # Hiệu ứng scroll
-│   ├── simulator.js       # Logic mô phỏng MLFQ
+│   ├── scroll.js          # Điều hướng và cuộn trang
+│   ├── simulator.js       # Xử lý logic mô phỏng
 │   └── navigation.js      # Chuyển trang
 │
 └── assets/
-    └── video/             # Nền video landing page
+    └── video/             # Video nền (nếu có)
+🎥 Demo
+💡 Bạn có thể chèn hình ảnh hoặc video minh họa tại đây.
+
+[CHỖ CHÈN HÌNH ẢNH / VIDEO DEMO]
+Ví dụ: ảnh giao diện landing, ảnh giao diện mô phỏng, ảnh biểu đồ tiến trình...
+
+👨‍💻 Đóng Góp
+Chúng tôi luôn hoan nghênh mọi sự đóng góp hoặc góp ý để cải tiến dự án.
+
+Fork repository.
+
+Tạo branch mới:
+
+bash
+Sao chép
+Chỉnh sửa
+git checkout -b feature/ten-tinh-nang
+Commit và push thay đổi:
+
+bash
+Sao chép
+Chỉnh sửa
+git commit -m "Thêm mô phỏng Gantt Chart"
+git push origin feature/ten-tinh-nang
+Mở pull request để được xem xét tích hợp vào dự án.
+
+👥 Nhóm Phát Triển
+Dự án được thực hiện theo nhóm, không phân chia vai trò cụ thể – mọi người cùng nhau đóng góp ý tưởng và phát triển:
+
+Thu-master (Initiator & Developer)
+
+Các thành viên nhóm khác (ẩn danh)
+
+📧 Liên Hệ
+Email: thuvoong@gmail.com
+
+GitHub: Thu-master
+
+🛡️ Giấy Phép
+Dự án phục vụ mục đích học tập, không sử dụng cho thương mại.
+Mọi người được phép fork, chỉnh sửa và sử dụng lại với ghi chú nguồn.
