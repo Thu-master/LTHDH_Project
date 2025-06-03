@@ -183,5 +183,5 @@ Project-LTHDH/
 ---
 
 ## 🛡️ Giấy Phép | LLicense
-Phần mềm này được sử dụng nội bộ và không dành cho mục đích thương mại.
+Phần mềm này được sử dụng nội bộ và không dành cho mục đích thương mại.  
 *This software is for internal use only and is not intended for commercial purposes.*
