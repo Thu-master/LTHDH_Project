@@ -1,7 +1,8 @@
 # 🌐 Mô phỏng thuật toán MLFQ – Multilevel Feedback Queue CPU Scheduling
-![HTML](https://img.shields.io/badge/Tech-HTML%2FCSS%2FJS-yellow)
+
+![HTML](https://img.shields.io/badge/Language-HTML%2FCSS%2FJS-yellow)
 ![Version](https://img.shields.io/badge/Version-1.0-blue)
-![Status](https://img.shields.io/badge/Status-Đồ_án_cuối_kỳ-success)
+![License](https://img.shields.io/badge/License-MIT-red)
 
 ---
 
@@ -20,7 +21,7 @@ This is a final course project for *Operating System Programming*. It provides a
 
 ---
 
-## 🚀 Trải Nghiệm Trực Tuyến
+## 🚀 Trải Nghiệm Trực Tuyến | Online Experience
 
 👉 [💻 Click để dùng thử ngay trên trình duyệt!](https://thu-master.github.io/LTHDH_Project/)
 
@@ -86,24 +87,41 @@ This project was developed by a collaborative team without strict role assignmen
 
 ---
 
-## 👨‍💻 Đóng Góp
-Nếu bạn muốn đóng góp, hãy:
-1. Fork repository này.
-2. Tạo branch mới với tính năng của bạn:
+## 👨‍💻 Đóng Góp | Contribute
+Nếu bạn muốn đóng góp, hãy làm theo các bước sau:
+If you'd like to contribute, please follow these steps:
+
+1. Fork repository này về tài khoản GitHub của bạn.
+   Fork this repository to your GitHub account.
+
+2. Clone repository đã fork về máy:
+   Clone the forked repository to your local machine:
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
+3. Tạo branch mới với tính năng của bạn:
+   Create a new branch for your feature:
    ```bash
    git checkout -b feature/your-feature-name
    ```
-3. Commit và push thay đổi:
+4. Commit và push thay đổi của bạn:
+   Commit and push your changes:
    ```bash
    git commit -m "Add your feature"
+   git add .
    git push origin feature/your-feature-name
    ```
-4. Mở Pull Request để gửi yêu cầu merge vào nhánh chính.
+5. Mở Pull Request để gửi yêu cầu hợp nhất vào nhánh chính (main).
+   Open a Pull Request to merge your branch into the main branch.
+> 📌 *Ghi chú / Note*: Hãy thay `your-username`, `your-repo-name`, và `your-feature-name` bằng thông tin tương ứng của bạn.  
+> Replace `your-username`, `your-repo-name`, and `your-feature-name` with your actual info.
 
 ---
 
 ### 👥 Đội Ngũ Phát Triển
 Chúng tôi là một nhóm đam mê công nghệ, cùng nhau phát triển dự án này:
+We are a group of technology enthusiasts, working together to develop this project:
 - [**Thu-master** 🔗](https://github.com/Thu-master)
 - [**Hà Hiệp Thanh** 🔗](https://github.com/HaHiepThanh)
 
