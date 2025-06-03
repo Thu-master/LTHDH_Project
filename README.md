@@ -56,7 +56,7 @@ This is a final course project for *Operating System Programming*. It provides a
 <!--link chữ đến video 🎬 [Xem video demo tại đây](https://www.youtube.com/watch?v=YOUR_VIDEO_ID) -->
 <!-- ![Demo GIF](./assets/demo.gif) -->
 
-- [**Hình ảnh giao diện**](./Demo/MainPage.png) <!-- Chèn hình ảnh mô phỏng -->
+- ![**Hình ảnh giao diện**](./Demo/MainPage.png) <!-- Chèn hình ảnh mô phỏng -->
 
 ---
 
