@@ -28,11 +28,11 @@ Trang web giúp người học, đặc biệt là sinh viên ngành CNTT, hiểu
 
 ## 📦 Cách chạy dự án | How to Run
 
-### 1. Clone repo về máy:
+ 1. Clone repo về máy:
    ```bash
    git clone https://github.com/Thu-master/LTHDH_Project.git
 
-### 2. Mở file index.html bằng trình duyệt (Chrome/Edge/Firefox...)
+ 2. Mở file index.html bằng trình duyệt (Chrome/Edge/Firefox...)
    | 🚀 **LIVE DEMO:** [Try it here](https://thu-master.github.io/LTHDH_Project/)
 
 3. Down extension VSCode và chạy golive trên VSCode(nếu cần)
