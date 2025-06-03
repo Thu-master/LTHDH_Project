@@ -1,5 +1,11 @@
 # 🌐 Mô phỏng thuật toán MLFQ – Multilevel Feedback Queue CPU Scheduling
 
+![HTML](https://img.shields.io/badge/Tech-HTML%2FCSS%2FJS-yellow)
+![Version](https://img.shields.io/badge/Version-1.0-blue)
+![Status](https://img.shields.io/badge/Status-Đồ_án_cuối_kỳ-success)
+
+---
+
 **Website mô phỏng trực quan thuật toán điều độ CPU: MLFQ (Multilevel Feedback Queue) được xây dựng bằng HTML, CSS và JavaScript.**
 
 ![Project Banner](#) <!-- Chèn hình ảnh demo tại đây -->
@@ -12,6 +18,8 @@ Trang web giúp người học, đặc biệt là sinh viên ngành CNTT, hiểu
 
 This is a final course project for *Operating System Programming*. It provides an interactive simulation of the **Multilevel Feedback Queue (MLFQ)** CPU scheduling algorithm using modern web technologies.
 
+---
+
 ## 🛠️ Công nghệ sử dụng | Technologies
 
 - HTML5
@@ -19,11 +27,15 @@ This is a final course project for *Operating System Programming*. It provides a
 - JavaScript (DOM, mô phỏng hàng đợi)
 - (Future upgrade: Java backend, modern JS frameworks...)
 
+---
+
 ## 🚀 Tính năng nổi bật | Key Features
 
 ✨ **Giao diện hiện đại**:  
 - Landing page cuốn hút với video nền, hiệu ứng cuộn mượt.  
 - Navbar có icon, responsive design.
+
+---
 
 🧠 **Mô phỏng trực quan**:  
 - Giao diện mô phỏng tương tác, cho phép người dùng nhập tiến trình.  
@@ -43,11 +55,20 @@ This is a final course project for *Operating System Programming*. It provides a
 - [**Video demo**](#) <!-- Chèn link video demo -->
 - [**Hình ảnh giao diện**](#) <!-- Chèn hình ảnh mô phỏng -->
 
+---
+
 ## 🧑‍💻 Nhóm thực hiện | Project Team
 
 Dự án được thực hiện theo nhóm với phương pháp phát triển linh hoạt, các thành viên cùng đóng góp vào tất cả các phần mà không chia nhiệm vụ cụ thể.
 
 This project was developed by a collaborative team without strict role assignment – each member contributed to various parts of the system.
+
+### 👥 Đội Ngũ Phát Triển
+Chúng tôi là một nhóm đam mê công nghệ, cùng nhau phát triển dự án này:
+- [**Thu-master** 🔗](https://github.com/Thu-master)
+- [**Hà Hiệp Thanh** 🔗](https://github.com/HaHiepThanh)
+
+---
 
 ## 📦 Cách chạy dự án | How to Run
 
@@ -57,7 +78,9 @@ This project was developed by a collaborative team without strict role assignmen
 
 2. Mở file index.html bằng trình duyệt (Chrome/Edge/Firefox...)
 
-📚 **Nội dung thư mục | Folder Structure**
+3. Down extension VSCode và chạy golive trên VSCode(nếu cần)
+
+## 📚 Nội dung thư mục | Folder Structure**
 ```
 Project-LTHDH/
 │
@@ -105,5 +128,8 @@ Project-LTHDH/
 ├── LICENSE
 ├── README.md
 └── temp.txt # Ghi chú tạm
-
 ```
+## 🛡️ Giấy Phép | LLicense
+Phần mềm này được sử dụng nội bộ và không dành cho mục đích thương mại.
+
+This software is for internal use only and is not intended for commercial purposes.
