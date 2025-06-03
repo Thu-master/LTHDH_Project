@@ -28,11 +28,11 @@ Trang web giúp người học, đặc biệt là sinh viên ngành CNTT, hiểu
 
 ## 📦 Cách chạy dự án | How to Run
 
-1. Clone repo về máy:
+### 1. Clone repo về máy:
    ```bash
    git clone https://github.com/Thu-master/LTHDH_Project.git
 
-2. Mở file index.html bằng trình duyệt (Chrome/Edge/Firefox...)
+### 2. Mở file index.html bằng trình duyệt (Chrome/Edge/Firefox...)
    | 🚀 **LIVE DEMO:** [Try it here](https://thu-master.github.io/LTHDH_Project/)
 
 3. Down extension VSCode và chạy golive trên VSCode(nếu cần)
@@ -85,7 +85,7 @@ Dự án được thực hiện theo nhóm với phương pháp phát triển li
 
 ---
 
-### 👨‍💻 Đóng Góp / Contributing
+## 👨‍💻 Đóng Góp / Contributing
 
 Nếu bạn muốn đóng góp, hãy làm theo các bước sau:  
 *If you'd like to contribute, please follow these steps:*
@@ -123,7 +123,7 @@ Nếu bạn muốn đóng góp, hãy làm theo các bước sau:
 
 ---
 
-### 👥 Đội Ngũ Phát Triển | DDevelopment Team
+## 👥 Đội Ngũ Phát Triển | DDevelopment Team
 Chúng tôi là một nhóm đam mê công nghệ, cùng nhau phát triển dự án này:
 *We are a group of technology enthusiasts, working together to develop this project:*
 - [**Thu-master** 🔗](https://github.com/Thu-master)
