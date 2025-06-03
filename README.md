@@ -136,7 +136,7 @@ Chúng tôi là một nhóm đam mê công nghệ, cùng nhau phát triển dự
 Project-LTHDH/
 │
 ├── Back-end/
-│ └── (Hiện tại chưa có nội dung cụ thể)
+│ └── (Coming soon)
 │
 ├── Background/
 │ ├── 12686138_3840_2160.jpg # Hình nền
@@ -176,6 +176,7 @@ Project-LTHDH/
 │ └── tutorial.js # Script hướng dẫn
 │
 ├── .gitignore
+├── index.html #Liên kết trang 
 ├── LICENSE
 ├── README.md
 └── temp.txt # Ghi chú tạm
