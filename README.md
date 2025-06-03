@@ -36,8 +36,6 @@ This is a final course project for *Operating System Programming*. It provides a
 - Landing page cuốn hút với video nền, hiệu ứng cuộn mượt.  
 - Navbar có icon, responsive design.
 
----
-
 🧠 **Mô phỏng trực quan**:  
 - Giao diện mô phỏng tương tác, cho phép người dùng nhập tiến trình.  
 - Hiển thị từng bước hoạt động của thuật toán MLFQ.  
@@ -53,7 +51,11 @@ This is a final course project for *Operating System Programming*. It provides a
 - Sử dụng `window.location` kết hợp hiệu ứng điều hướng.
 
 🖼️ **Demo & Hình ảnh**:
-- [![**Video demo**](https://img.youtube.com/vi/YOUR_VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID) <!-- Chèn link video demo -->
+<!-- - [![**Video demo**](https://img.youtube.com/vi/YOUR_VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID) <!-- Chèn link video demo -->
+
+<!--link chữ đến video 🎬 [Xem video demo tại đây](https://www.youtube.com/watch?v=YOUR_VIDEO_ID) -->
+<!-- ![Demo GIF](./assets/demo.gif) -->
+
 - [**Hình ảnh giao diện**](./Demo/MainPage.png) <!-- Chèn hình ảnh mô phỏng -->
 
 ---
