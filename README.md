@@ -1,5 +1,4 @@
 # 🌐 Mô phỏng thuật toán MLFQ – Multilevel Feedback Queue CPU Scheduling
-
 ![HTML](https://img.shields.io/badge/Tech-HTML%2FCSS%2FJS-yellow)
 ![Version](https://img.shields.io/badge/Version-1.0-blue)
 ![Status](https://img.shields.io/badge/Status-Đồ_án_cuối_kỳ-success)
@@ -18,6 +17,25 @@
 Trang web giúp người học, đặc biệt là sinh viên ngành CNTT, hiểu rõ hơn về cách thuật toán MLFQ xử lý các tiến trình qua từng cấp độ hàng đợi ưu tiên, thời lượng CPU, và các bước điều phối.
 
 This is a final course project for *Operating System Programming*. It provides an interactive simulation of the **Multilevel Feedback Queue (MLFQ)** CPU scheduling algorithm using modern web technologies.
+
+---
+
+## 🚀 Trải Nghiệm Trực Tuyến
+
+👉 [💻 Click để dùng thử ngay trên trình duyệt!](https://thu-master.github.io/LTHDH_Project/)
+
+---
+
+## 📦 Cách chạy dự án | How to Run
+
+1. Clone repo về máy:
+   ```bash
+   git clone https://github.com/Thu-master/LTHDH_Project.git
+
+2. Mở file index.html bằng trình duyệt (Chrome/Edge/Firefox...)
+   | 🚀 **LIVE DEMO:** [Try it here](https://thu-master.github.io/LTHDH_Project/)
+
+3. Down extension VSCode và chạy golive trên VSCode(nếu cần)
 
 ---
 
@@ -56,7 +74,7 @@ This is a final course project for *Operating System Programming*. It provides a
 <!--link chữ đến video 🎬 [Xem video demo tại đây](https://www.youtube.com/watch?v=YOUR_VIDEO_ID) -->
 <!-- ![Demo GIF](./assets/demo.gif) -->
 
-- ![Hình ảnh giao diện](./Demo/MainPage.png) <!-- Chèn hình ảnh mô phỏng -->
+![Hình ảnh giao diện](./Demo/MainPage.png) <!-- Chèn hình ảnh mô phỏng -->
 
 ---
 
@@ -66,22 +84,30 @@ Dự án được thực hiện theo nhóm với phương pháp phát triển li
 
 This project was developed by a collaborative team without strict role assignment – each member contributed to various parts of the system.
 
+---
+
+## 👨‍💻 Đóng Góp
+Nếu bạn muốn đóng góp, hãy:
+1. Fork repository này.
+2. Tạo branch mới với tính năng của bạn:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Commit và push thay đổi:
+   ```bash
+   git commit -m "Add your feature"
+   git push origin feature/your-feature-name
+   ```
+4. Mở Pull Request để gửi yêu cầu merge vào nhánh chính.
+
+---
+
 ### 👥 Đội Ngũ Phát Triển
 Chúng tôi là một nhóm đam mê công nghệ, cùng nhau phát triển dự án này:
 - [**Thu-master** 🔗](https://github.com/Thu-master)
 - [**Hà Hiệp Thanh** 🔗](https://github.com/HaHiepThanh)
 
 ---
-
-## 📦 Cách chạy dự án | How to Run
-
-1. Clone repo về máy:
-   ```bash
-   git clone https://github.com/Thu-master/LTHDH_Project.git
-
-2. Mở file index.html bằng trình duyệt (Chrome/Edge/Firefox...)
-
-3. Down extension VSCode và chạy golive trên VSCode(nếu cần)
 
 ## 📚 Nội dung thư mục | Folder Structure**
 ```
@@ -132,6 +158,8 @@ Project-LTHDH/
 ├── README.md
 └── temp.txt # Ghi chú tạm
 ```
+---
+
 ## 🛡️ Giấy Phép | LLicense
 Phần mềm này được sử dụng nội bộ và không dành cho mục đích thương mại.
 
