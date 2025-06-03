@@ -8,7 +8,8 @@
 
 **Website mô phỏng trực quan thuật toán điều độ CPU: MLFQ (Multilevel Feedback Queue) được xây dựng bằng HTML, CSS và JavaScript.**
 
-![Project Banner](#) <!-- Chèn hình ảnh demo tại đây -->
+<!-- ![Project Banner](#)  Chèn hình ảnh demo tại đây -->
+![Giao diện Landing Page](./Demo/MLFQ.png)
 
 ## 🎯 Giới thiệu | Introduction
 
@@ -52,8 +53,8 @@ This is a final course project for *Operating System Programming*. It provides a
 - Sử dụng `window.location` kết hợp hiệu ứng điều hướng.
 
 🖼️ **Demo & Hình ảnh**:
-- [**Video demo**](#) <!-- Chèn link video demo -->
-- [**Hình ảnh giao diện**](#) <!-- Chèn hình ảnh mô phỏng -->
+- [![**Video demo**](https://img.youtube.com/vi/YOUR_VIDEO_ID/hqdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID) <!-- Chèn link video demo -->
+- [**Hình ảnh giao diện**](./Demo/MainPage.png) <!-- Chèn hình ảnh mô phỏng -->
 
 ---
 
