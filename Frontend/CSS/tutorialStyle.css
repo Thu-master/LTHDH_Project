@@ -57,8 +57,10 @@ body.no-scroll {
   color: #000;
 }
 
+
 /* Hero Section */
 .hero {
+  margin-top: 24px;
   position: relative;
   z-index: 2;
   height: 100vh;
@@ -374,7 +376,6 @@ h2 {
   pointer-events: none;
 }
 
-/* Footer About-US */
 footer {
   background: linear-gradient(to bottom, #0b0b0b, #000); /* Nền tách biệt */
   color: #ccc;
@@ -400,38 +401,28 @@ footer {
   margin: 20px;
 }
 
-.footer-left h3 {
+.footer-left h3, .footer-right h3, .footer-social h3, .footer-links h3{
   color: #00d2ff;
-  margin-bottom: 10px;
+  margin: 0 0 14px 0;
   font-size: 1.2em;
+  line-height: 1.2;
 }
 
-.footer-right p,
 .footer-left p {
-  margin: 6px 0;
+  margin: 0;
+  color: #fff;
+  line-height: 1.5;
 }
 
-.footer-social a {
-  margin-right: 10px;
-  font-size: 1.2em;
-  color: #ccc;
-  transition: color 0.3s;
-  text-decoration: none;
-}
-
-.footer-social a:hover {
-  color: #00d2ff;
-}
-
-.footer-links a {
+.footer-right a, .footer-links a, .footer-social a {
   display: block;
-  color: #ccc;
+  color: #fff;
   text-decoration: none;
   margin: 6px 0;
   transition: color 0.3s;
 }
 
-.footer-links a:hover {
+.footer-right a:hover, .footer-social a:hover, .footer-links a:hover {
   color: #00d2ff;
 }
 
