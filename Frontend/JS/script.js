@@ -5,7 +5,7 @@ function addProcess() {
   const name = document.getElementById("processName").value;
   const arrival = parseInt(document.getElementById("arrivalTime").value);
   const burst = parseInt(document.getElementById("burstTime").value);
-  
+
   if (!name || isNaN(arrival) || isNaN(burst)) {
     alert("Vui lòng điền đầy đủ thông tin tiến trình.");
     return;
@@ -16,7 +16,7 @@ function addProcess() {
     arrivalTime: arrival,
     burstTime: burst,
     remainingTime: burst,
-    queueLevel: 0
+    queueLevel: 0,
   });
 
   log(`✅ Đã thêm tiến trình: ${name} | Arrival: ${arrival}, Burst: ${burst}`);
@@ -31,7 +31,7 @@ function startSimulation() {
   let procList = JSON.parse(JSON.stringify(processes));
 
   const interval = setInterval(() => {
-    procList.forEach(p => {
+    procList.forEach((p) => {
       if (p.arrivalTime === time) {
         queues[0].push(p);
         log(`🕓 Time ${time}: Tiến trình ${p.name} đến và vào Queue 0`);
@@ -45,9 +45,11 @@ function startSimulation() {
         let qTime = q < 2 ? quantum[q] : current.remainingTime;
         let execTime = Math.min(qTime, current.remainingTime);
 
-        log(`▶️ Đang chạy ${current.name} từ Queue ${q} trong ${execTime} đơn vị thời gian`);
+        log(
+          `▶️ Đang chạy ${current.name} từ Queue ${q} trong ${execTime} đơn vị thời gian`
+        );
         updateQueues(queues);
-        
+
         setTimeout(() => {
           time += execTime;
           current.remainingTime -= execTime;
@@ -55,7 +57,9 @@ function startSimulation() {
           if (current.remainingTime > 0) {
             current.queueLevel = Math.min(2, current.queueLevel + 1);
             queues[current.queueLevel].push(current);
-            log(`🔁 ${current.name} chưa xong, chuyển xuống Queue ${current.queueLevel}`);
+            log(
+              `🔁 ${current.name} chưa xong, chuyển xuống Queue ${current.queueLevel}`
+            );
           } else {
             completed.push(current);
             log(`✅ ${current.name} hoàn tất tại thời điểm ${time}`);
@@ -67,7 +71,6 @@ function startSimulation() {
             log(`🎉 Tất cả tiến trình đã hoàn tất.`);
             clearInterval(interval);
           }
-
         }, 500);
         return;
       }
@@ -80,10 +83,13 @@ function startSimulation() {
 function updateQueues(queues) {
   for (let i = 0; i < queues.length; i++) {
     const queueDiv = document.getElementById(`queue${i}`);
-    queueDiv.innerHTML = `<h3>Queue ${i} (${i === 0 ? "TQ:4" : i === 1 ? "TQ:8" : "FCFS"})</h3>`;
-    queues[i].forEach(p => {
+    queueDiv.innerHTML = `<h3>Queue ${i} (${
+      i === 0 ? "TQ:4" : i === 1 ? "TQ:8" : "FCFS"
+    })</h3>`;
+    queues[i].forEach((p) => {
       const el = document.createElement("span");
-      el.className = "process";s
+      el.className = "process";
+      s;
       el.innerText = p.name;
       queueDiv.appendChild(el);
     });
@@ -108,4 +114,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
