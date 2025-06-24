@@ -165,118 +165,15 @@ class MainQueue {
 // ------------------------------
 // Start simulation
 /*(async () => {
-    const p1 = new Process('P1', 120);
-    const p2 = new Process('P2', 100);
-    const p3 = new Process('P3', 50);
-  
-    const queue1 = new RRQueue(40, 8);
-    const queue2 = new RRQueue(40, 16);
-    const queue3 = new FCFSQueue(20);
-  
-    queue1.addProcesses([p1, p2, p3]);
-  
-    const main_queue = new MainQueue();
-    main_queue.addSubQueue(queue1);
-    main_queue.addSubQueue(queue2);
-    main_queue.addSubQueue(queue3);
-  
-    await main_queue.runScheduling();
-  })();
-  */
-
-const inputProcesses = [];
-
-function updateProcessList() {
-  const list = document.getElementById("processList");
-  list.innerHTML = "";
-  inputProcesses.forEach((p, index) => {
-    const li = document.createElement("li");
-    li.innerHTML = `<strong>${p.name}</strong>: ${p.burst_time}ms`;
-    list.appendChild(li);
-  });
-}
-
-function addProcess() {
-  const name = document.getElementById("processName").value.trim();
-  const burstTime = parseInt(document.getElementById("burstTime").value);
-
-  // Kiểm tra dữ liệu hợp lệ
-  if (!name || isNaN(burstTime) || burstTime <= 0) {
-    alert("Please enter a valid process name and burst time.");
-    return;
-  }
-
-  // Ràng buộc: không quá 4 tiến trình
-  if (inputProcesses.length >= 4) {
-    alert("Only up to 4 processes are allowed.");
-    return;
-  }
-
-  // Ràng buộc: không trùng tên
-  const isDuplicate = inputProcesses.some(
-    (proc) => proc.name.toLowerCase() === name.toLowerCase()
-  );
-  if (isDuplicate) {
-    alert("Process name must be unique.");
-    return;
-  }
-
-  // Thêm tiến trình
-  inputProcesses.push(new Process(name, burstTime));
-  updateProcessList();
-
-  // Reset form
-  document.getElementById("processName").value = "";
-  document.getElementById("burstTime").value = "";
-  document.getElementById("processName").focus();
-}
-
-// Cho phép ấn Enter để thêm tiến trình và chuyển focus hợp lý
-document.addEventListener("DOMContentLoaded", () => {
-  const nameInput = document.getElementById("processName");
-  const burstInput = document.getElementById("burstTime");
-
-  // Khi vừa vào trang, focus vào ô nhập tên tiến trình
-  nameInput.focus();
-
-  // Enter trong ô "Process Name" → chuyển sang "Burst Time"
-  nameInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-      if (nameInput.value.trim() !== "") {
-        burstInput.focus();
-      }
-    }
-  });
-
-  // Enter trong ô "Burst Time" → thêm tiến trình
-  burstInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-      if (burstInput.value.trim() !== "") {
-        addProcess();
-        nameInput.focus(); // Sau khi thêm, quay lại nhập tên mới
-        nameInput.select(); // Bôi đen sẵn để nhập cái mới luôn
-      }
-    }
-  });
-});
-
-async function startSimulation() {
-  if (inputProcesses.length === 0) {
-    alert("Please add at least one process before starting the simulation.");
-    return;
-  }
-
-  const mainDiv = document.getElementById("main");
-  mainDiv.innerHTML = "";
+  const p1 = new Process("P1", 120);
+  const p2 = new Process("P2", 100);
+  const p3 = new Process("P3", 50);
 
   const queue1 = new RRQueue(40, 8);
   const queue2 = new RRQueue(40, 16);
   const queue3 = new FCFSQueue(20);
 
-  const userProcesses = inputProcesses.map(
-    (p) => new Process(p.name, p.burst_time)
-  );
-  queue1.addProcesses(userProcesses);
+  queue1.addProcesses([p1, p2, p3]);
 
   const main_queue = new MainQueue();
   main_queue.addSubQueue(queue1);
@@ -284,4 +181,5 @@ async function startSimulation() {
   main_queue.addSubQueue(queue3);
 
   await main_queue.runScheduling();
-}
+})();
+*/
