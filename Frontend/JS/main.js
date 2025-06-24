@@ -184,35 +184,113 @@ class MainQueue {
   })();
   */
 
-const inputProcesses = [];
+let inputProcesses = [];
+let deleteMode = false;
+let selectedIndexes = new Set();
 
 function updateProcessList() {
   const list = document.getElementById("processList");
   list.innerHTML = "";
+
   inputProcesses.forEach((p, index) => {
     const li = document.createElement("li");
-    li.innerHTML = `<strong>${p.name}</strong>: ${p.burst_time}ms`;
+
+    if (deleteMode) {
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = selectedIndexes.has(index);
+      checkbox.style.marginRight = "10px";
+      checkbox.onclick = () => {
+        if (checkbox.checked) {
+          selectedIndexes.add(index);
+        } else {
+          selectedIndexes.delete(index);
+        }
+      };
+      li.appendChild(checkbox);
+    }
+
+    const text = document.createElement("span");
+    text.innerHTML = `<strong>${p.name}</strong>: ${p.burst_time}ms`;
+    li.appendChild(text);
+
+    // Nút Edit bên phải tiến trình
+    const editBtn = document.createElement("button");
+    editBtn.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
+    editBtn.className = "edit-btn";
+    editBtn.onclick = () => {
+      document.getElementById("processName").value = p.name;
+      document.getElementById("burstTime").value = p.burst_time;
+      inputProcesses.splice(index, 1);
+      updateProcessList();
+      document.getElementById("processName").focus();
+    };
+    li.appendChild(editBtn);
+
     list.appendChild(li);
   });
+
+  // Ẩn/hiện nút Apply Delete
+  const applyBtn = document.getElementById("applyDeleteBtn");
+  applyBtn.style.display = deleteMode ? "inline-block" : "none";
+}
+
+function toggleDeleteMode() {
+  if (inputProcesses.length === 0) {
+    alert("Queue is empty. Nothing to delete.");
+    return;
+  }
+
+  deleteMode = !deleteMode;
+  editMode = false;
+  selectedIndexes.clear();
+  updateProcessList();
+}
+
+if (deleteMode && selectedIndexes.size > 0) {
+  handleBulkDelete();
+}
+
+function applyDeleteChanges() {
+  if (selectedIndexes.size === 0) {
+    alert("Please select at least one process to delete.");
+    return;
+  }
+
+  if (!confirm("Are you sure you want to delete selected processes?")) return;
+
+  inputProcesses = inputProcesses.filter((_, i) => !selectedIndexes.has(i));
+  selectedIndexes.clear();
+  deleteMode = false;
+  updateProcessList();
 }
 
 function addProcess() {
   const name = document.getElementById("processName").value.trim();
   const burstTime = parseInt(document.getElementById("burstTime").value);
 
-  // Kiểm tra dữ liệu hợp lệ
-  if (!name || isNaN(burstTime) || burstTime <= 0) {
-    alert("Please enter a valid process name and burst time.");
+  //  kiểm tra tên tiến trình: chỉ chấp nhận ký tự chữ + số, tối đa 6 ký tự
+  const nameRegex = /^[A-Za-z][A-Za-z0-9]{0,5}$/;
+  if (!nameRegex.test(name)) {
+    alert(
+      "Process name must start with a letter and be alphanumeric (max 6 characters)."
+    );
     return;
   }
 
-  // Ràng buộc: không quá 4 tiến trình
+  //  kiểm tra burst time
+  if (isNaN(burstTime) || burstTime <= 0 || burstTime > 400) {
+    alert("Burst time must be a number between 1 and 400.");
+    return;
+  }
+
+  //  giới hạn tối đa 4 tiến trình
   if (inputProcesses.length >= 4) {
     alert("Only up to 4 processes are allowed.");
     return;
   }
 
-  // Ràng buộc: không trùng tên
+  //  không trùng tên
   const isDuplicate = inputProcesses.some(
     (proc) => proc.name.toLowerCase() === name.toLowerCase()
   );
@@ -221,15 +299,46 @@ function addProcess() {
     return;
   }
 
-  // Thêm tiến trình
+  //  hợp lệ → thêm tiến trình
   inputProcesses.push(new Process(name, burstTime));
   updateProcessList();
 
-  // Reset form
+  // Reset input
   document.getElementById("processName").value = "";
   document.getElementById("burstTime").value = "";
   document.getElementById("processName").focus();
 }
+//-------------------------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const nameInput = document.getElementById("processName");
+  const burstInput = document.getElementById("burstTime");
+
+  nameInput.focus();
+
+  nameInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter" && nameInput.value.trim() !== "") {
+      burstInput.focus();
+    }
+  });
+
+  burstInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault(); //  Ngăn Enter gây tác dụng phụ sau alert()
+
+      const name = nameInput.value.trim();
+      const burst = burstInput.value.trim();
+
+      if (!name || !burst) {
+        alert("Please enter both process name and burst time.");
+        return;
+      }
+
+      addProcess();
+      nameInput.focus();
+      nameInput.select();
+    }
+  });
+});
 
 // Cho phép ấn Enter để thêm tiến trình và chuyển focus hợp lý
 document.addEventListener("DOMContentLoaded", () => {
@@ -259,6 +368,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+/* Tinh gọn đoạn trên
+document.addEventListener("DOMContentLoaded", () => {
+  const nameInput = document.getElementById("processName");
+  const burstInput = document.getElementById("burstTime");
+
+  nameInput.focus();
+
+  // Enter trong ô "Process Name" → chuyển sang "Burst Time"
+  nameInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter" && nameInput.value.trim() !== "") {
+      burstInput.focus();
+    }
+  });
+
+  // Enter trong ô "Burst Time" → thêm tiến trình
+  burstInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Chặn enter gây submit ngầm
+
+      const name = nameInput.value.trim();
+      const burst = burstInput.value.trim();
+
+      if (!name || !burst) {
+        alert("Please enter both process name and burst time.");
+        return;
+      }
+
+      addProcess();
+      nameInput.focus();
+      nameInput.select();
+    }
+  });
+});
+*/
+//--------------------------------------------------------------------------------------------------------------------
 
 async function startSimulation() {
   if (inputProcesses.length === 0) {

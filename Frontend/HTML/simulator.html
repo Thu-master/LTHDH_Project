@@ -28,8 +28,22 @@
             placeholder="Burst Time (ms)"
             min="1"
           />
+          <!-- Nút Add Process -->
           <button onclick="addProcess()">
             <i class="fas fa-plus-circle"></i> Add Process
+          </button>
+
+          <!-- Nút Delete -->
+          <button onclick="toggleDeleteMode()">
+            <i class="fas fa-trash-alt"></i> Delete
+          </button>
+          <!-- Nút Apply Changes (xác nhận xóa) -->
+          <button
+            id="applyDeleteBtn"
+            style="display: none"
+            onclick="applyDeleteChanges()"
+          >
+            <i class="fa-solid fa-check"></i> Apply Changes
           </button>
         </div>
 

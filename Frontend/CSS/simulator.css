@@ -170,3 +170,29 @@ input[type="number"] {
   background-color: #ff8c00;
   transform: scale(1.02);
 }
+
+#processList button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#processList button:hover {
+  background-color: #555;
+}
+
+/* Style cho nút edit */
+.edit-btn {
+  background-color: transparent;
+  border: none;
+  color: #ffd700;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.edit-btn:hover {
+  color: #ffa500;
+}
